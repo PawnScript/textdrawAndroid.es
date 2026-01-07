@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen Decorativa con Rosas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin: 40px auto;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .main-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 8px solid white;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+        
+        .main-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .rose {
+            position: absolute;
+            font-size: 2rem;
+            z-index: 1;
+            animation: float 6s infinite ease-in-out;
+            opacity: 0.9;
+        }
+        
+        /* Posicionamiento de los textos */
+        .text-label {
+            position: absolute;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            z-index: 3;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        /* Posiciones específicas para los textos */
+        .four-eyes {
+            top: 10%;
+            left: 15%;
+            transform: rotate(-5deg);
+        }
+        
+        .whale {
+            top: 10%;
+            right: 15%;
+            transform: rotate(5deg);
+        }
+        
+        .globe-fish {
+            bottom: 15%;
+            left: 20%;
+            transform: rotate(-3deg);
+        }
+        
+        .instructions {
+            margin-top: 40px;
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        /* Animación para las rosas */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+        
+        /* Ajustes para dispositivos móviles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .text-label {
+                font-size: 1rem;
+                padding: 6px 10px;
+                min-width: 100px;
+            }
+            
+            .rose {
+                font-size: 1.5rem;
+            }
+            
+            .four-eyes, .whale {
+                top: 5%;
+            }
+            
+            .globe-fish {
+                bottom: 10%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Imagen Decorativa con Rosas</h1>
+        
+        <div class="image-container">
+            <!-- Imagen central -->
+            <img src="https://i.postimg.cc/Wp0bD5j2/Polish-20251230-205202503.jpg" alt="Imagen central decorativa" class="main-image">
+            
+            <!-- Rosas decorativas -->
+            <div class="rose" style="top: 5%; left: 5%; animation-delay: 0s;">🌹</div>
+            <div class="rose" style="top: 15%; left: 3%; animation-delay: 1s;">🌹</div>
+            <div class="rose" style="top: 25%; left: 1%; animation-delay: 2s;">🌹</div>
+            <div class="rose" style="top: 5%; right: 5%; animation-delay: 0.5s;">🌹</div>
+            <div class="rose" style="top: 15%; right: 3%; animation-delay: 1.5s;">🌹</div>
+            <div class="rose" style="top: 25%; right: 1%; animation-delay: 2.5s;">🌹</div>
+            <div class="rose" style="bottom: 10%; left: 5%; animation-delay: 0.7s;">🌹</div>
+            <div class="rose" style="bottom: 20%; left: 3%; animation-delay: 1.7s;">🌹</div>
+            <div class="rose" style="bottom: 30%; left: 1%; animation-delay: 2.7s;">🌹</div>
+            <div class="rose" style="bottom: 10%; right: 5%; animation-delay: 1.2s;">🌹</div>
+            <div class="rose" style="bottom: 20%; right: 3%; animation-delay: 2.2s;">🌹</div>
+            <div class="rose" style="bottom: 30%; right: 1%; animation-delay: 3.2s;">🌹</div>
+            
+            <!-- Textos en posiciones específicas -->
+            <div class="text-label four-eyes">4 ojos</div>
+            <div class="text-label whale">ballena</div>
+            <div class="text-label globe-fish">pes globo</div>
+        </div>
+        
+        <div class="instructions">
+            <p>Esta página muestra una imagen central decorada con emojis de rosas animadas y textos en posiciones específicas.</p>
+            <p>Los textos "4 ojos", "ballena" y "pes globo" están posicionados alrededor de la imagen central.</p>
+            <p>Las rosas tienen una animación de flotación suave para crear un efecto visual atractivo.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Página creada con HTML, CSS y JavaScript | Imagen alojada en PostImage</p>
+        </div>
+    </div>
+
+    <script>
+        // Agregar interacción dinámica a las rosas
+        document.addEventListener('DOMContentLoaded', function() {
+            const roses = document.querySelectorAll('.rose');
+            
+            roses.forEach(rose => {
+                // Agregar efecto al pasar el mouse
+                rose.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.5)';
+                    this.style.transition = 'transform 0.3s';
+                });
+                
+                rose.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+                
+                // Hacer que las rosas sean arrastrables
+                rose.setAttribute('draggable', 'true');
+                
+                rose.addEventListener('dragstart', function(e) {
+                    e.dataTransfer.setData('text/plain', this.textContent);
+                });
+            });
+            
+            // Permitir soltar rosas en cualquier parte
+            document.body.addEventListener('dragover', function(e) {
+                e.preventDefault();
+            });
+            
+            document.body.addEventListener('drop', function(e) {
+                e.preventDefault();
+                const roseEmoji = e.dataTransfer.getData('text/plain');
+                
+                if (roseEmoji) {
+                    const newRose = document.createElement('div');
+                    newRose.className = 'rose';
+                    newRose.textContent = roseEmoji;
+                    newRose.style.position = 'absolute';
+                    newRose.style.left = e.clientX + 'px';
+                    newRose.style.top = e.clientY + 'px';
+                    newRose.style.fontSize = '2rem';
+                    newRose.style.animation = 'float 6s infinite ease-in-out';
+                    newRose.style.animationDelay = Math.random() * 3 + 's';
+                    
+                    // Agregar los mismos eventos a la nueva rosa
+                    newRose.addEventListener('mouseenter', function() {
+                        this.style.transform = 'scale(1.5)';
+                        this.style.transition = 'transform 0.3s';
+                    });
+                    
+                    newRose.addEventListener('mouseleave', function() {
+                        this.style.transform = 'scale(1)';
+                    });
+                    
+                    newRose.setAttribute('draggable', 'true');
+                    newRose.addEventListener('dragstart', function(ev) {
+                        ev.dataTransfer.setData('text/plain', this.textContent);
+                    });
+                    
+                    document.body.appendChild(newRose);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
